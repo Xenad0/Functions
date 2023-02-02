@@ -1,0 +1,28 @@
+{
+    "bindings": [
+      {
+        "authLevel": "anonymous",
+        "type": "httpTrigger",
+        "direction": "in",
+        "name": "req",
+        "methods": [
+          "get"
+        ],
+        "route": "items"
+      },
+      {
+        "type": "http",
+        "direction": "out",
+        "name": "res"
+      },
+      {
+        "name": "testData",
+        "direction": "in",
+        "type": "cosmosDB",
+        "connectionStringSetting": "db-cosmos-dev-9782b81d_DOCUMENTDB",
+        "databaseName": "Testapp",
+        "collectionName": "Items",
+        "sqlQuery": "SELECT * from c"
+      }
+    ]
+  }
